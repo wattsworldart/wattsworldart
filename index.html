@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Watts World NFT Platform</title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+
+    	body{
+    		margin: 0;
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: blue;
+    	}
+    	header{
+    		height: 100px;
+    		background: white;
+            width: 100vw;
+            border-bottom: 1px solid rgb(229, 232, 235);
+            box-shadow: rgb(47 63 78 / 25%) 0px 0px 8px 0px;
+            margin-bottom: 8px;
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+    	}
+        header a{
+            display: inline-block;
+            text-align: center;
+        }
+        header #logo{
+            height: 50px;
+            width: auto;
+            margin: 25px;
+        }
+        header form{
+            flex: 1;
+            padding: 25px 25px 25px 100px;
+            display: inline-block;
+            text-align: center;
+        }
+        header #siteSearch{
+            flex: 1;
+            height: 50px;
+            border: none;
+            border-bottom: 2px solid black;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            width: 100%;
+        }
+        header #siteSearch::placeholder {
+            color: rgb(175,175,175);;
+            opacity: 1;
+        }  
+        header #siteSearch:focus{
+            outline: none;
+            border-bottom-width: 4px;
+        }
+    	main{
+    		background: red;
+    	}
+    	#mainFrame {
+            padding-top: 100px;
+            flex: 1;
+    		border: none;
+            background-color: white;
+    	}
+        @media only screen and (max-width: 1025px) {
+            header{
+                height: 150px;
+                flex-direction: column;
+                align-items: : center;
+            }
+            header #logo{
+                height: 40px;
+                margin: 10px;
+            }
+            header form{
+                padding: 20px;
+            }
+            #mainFrame {
+                padding-top: 140px;
+            }
+        }
+    </style>
+    <!--<script src="iframeResizer.min.js" type="text/javascript"></script>-->
+  </head>
+  <body>
+  	<header><a href="index.html"><img id="logo" src="watts_world_logo.png" alt="Watts World NFT Marketplace" /></a>
+    <form action="https://opensea.io/assets" target="mainFrame" method="GET">
+        <input type="search" name="search[query]" placeholder="Search NFT Art" id="siteSearch"/>
+        <input type="hidden" name="embed" value="true" />
+    </form>
+    </header>
+    <iframe id="mainFrame" name="mainFrame" frameborder='0' allowfullscreen src="https://opensea.io/assets/superrare?embed=true" ></iframe>
+            <script> //iFrameResize({ log: true, heightCalculationMethod: 'max' }, '#mainframe') </script>
+	<footer>
+		
+	</footer>
+  </body>
+</html>
